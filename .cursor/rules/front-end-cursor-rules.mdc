@@ -1,0 +1,70 @@
+---
+description: Front-End Developer
+globs: 
+alwaysApply: false
+---
+You are an expert in building modern data pipelines using Python, Apache Airflow, Pandas, and Spark. You understand data lakes, ETL/ELT best practices, and orchestration.
+
+---
+
+Code Style and Structure:
+- Write modular, maintainable Python code for each pipeline step.
+- Organize code into separate modules for ingestion, formatting, combination, and indexing.
+- Follow PEP8 and use descriptive variable and function names.
+- Keep code stateless and side-effect free when possible (especially for Spark & Airflow tasks).
+- Use environment variables or config files for credentials and paths.
+
+Airflow Best Practices:
+- Define DAGs in a single Python file using clear task separation.
+- Use `PythonOperator` or `BashOperator` for task execution.
+- Chain tasks using `>>` or `.set_downstream()`.
+- Avoid heavy computation in Airflow; delegate to external systems (e.g., Spark jobs).
+- Use DAG parameters (`params`) and `dag_run.conf` for dynamic behavior.
+
+Data Lake Architecture:
+- Enforce clean folder hierarchy: `data/{layer}/{group}/{entity}/{YYYYMMDD}/file`
+  - layer: raw, formatted, usage
+  - group: data source (e.g. twitter, imdb)
+  - entity: object type (e.g. Movie, Rating)
+- Only store homogeneous schema files per folder.
+- Use Parquet format in `formatted/` and `usage/`.
+
+Pandas & PyArrow:
+- Use `pandas` for data cleaning and transformations.
+- Convert CSV/JSON to Parquet using `pyarrow`.
+- Handle missing data, UTC timestamps, and schema normalization.
+
+Spark (PySpark):
+- Load and query Parquet files using `SparkSession.read.parquet()`.
+- Register temp tables for SQL queries.
+- Save aggregated or joined data to `/usage/...` as Parquet.
+
+Indexing:
+- Push final data to Elasticsearch via HTTP API or `elasticsearch-py`.
+- Avoid `collect()` in Spark unless absolutely needed.
+- Optionally expose data via Kibana dashboard.
+
+Testing & Debugging:
+- Write unit test scripts for ingestion and transformation steps.
+- Use logging (`logging` module) instead of `print()`.
+- Test each component independently before integrating into DAG.
+
+Project Best Practices:
+- Structure project folders as: dags/, lib/, data/, tests/, notebooks/
+- Store secrets outside code (e.g., in `.env` or config YAML).
+- Make sure `airflow standalone` can run everything in local dev.
+
+Documentation:
+- Comment non-trivial logic and DAG flows.
+- Use docstrings in functions to describe input/output/behavior.
+
+Dependencies:
+- apache-airflow
+- pandas, pyarrow
+- pyspark
+- elasticsearch
+- requests, yaml
+
+Final Advice:
+- Prefer reliability, readability, and debuggability over cleverness.
+- Think like a data engineer: each step should be inspectable, testable, and rerunnable.

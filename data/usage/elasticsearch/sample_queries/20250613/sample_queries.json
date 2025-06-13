@@ -1,0 +1,63 @@
+{
+  "top_rated_movies": {
+    "index": "cinema_analytics_movies",
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "range": {
+              "averageRating": {
+                "gte": 8.0
+              }
+            }
+          },
+          {
+            "range": {
+              "numVotes": {
+                "gte": 10000
+              }
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "averageRating": {
+          "order": "desc"
+        }
+      }
+    ],
+    "size": 20
+  },
+  "genre_performance": {
+    "index": "cinema_analytics_genres",
+    "query": {
+      "match_all": {}
+    },
+    "sort": [
+      {
+        "avg_rating": {
+          "order": "desc"
+        }
+      }
+    ]
+  },
+  "yearly_movie_trends": {
+    "index": "cinema_analytics_trends",
+    "query": {
+      "range": {
+        "year": {
+          "gte": 2010
+        }
+      }
+    },
+    "sort": [
+      {
+        "year": {
+          "order": "desc"
+        }
+      }
+    ]
+  }
+}
