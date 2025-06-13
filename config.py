@@ -20,7 +20,7 @@ IMDB_DATASETS = {
 }
 
 # OMDB API (free tier: 1000 requests/day)
-OMDB_API_KEY = os.getenv("OMDB_API_KEY", "your_api_key_here")
+OMDB_API_KEY = os.getenv("OMDB_API_KEY", "ad2d0927")
 OMDB_BASE_URL = "http://www.omdbapi.com/"
 
 # Elasticsearch configuration

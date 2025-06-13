@@ -1,0 +1,22 @@
+[
+  {
+    "Title":"The Shawshank Redemption",
+    "Year":"1994",
+    "Director":"Frank Darabont",
+    "Plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "Genre":"Drama",
+    "imdbRating":"9.3",
+    "BoxOffice":"$16,015,202",
+    "Source":"Sample Data (API key needed for real data)"
+  },
+  {
+    "Title":"The Godfather",
+    "Year":"1972",
+    "Director":"Francis Ford Coppola",
+    "Plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "Genre":"Crime, Drama",
+    "imdbRating":"9.2",
+    "BoxOffice":"$134,966,411",
+    "Source":"Sample Data (API key needed for real data)"
+  }
+]

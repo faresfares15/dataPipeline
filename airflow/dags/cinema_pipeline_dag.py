@@ -2,9 +2,17 @@ import sys
 import os
 from datetime import datetime, timedelta
 
-# Add project root to Python path
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.insert(0, project_root)
+# Add project root to Python path - but avoid the local airflow directory conflict
+if '__file__' in globals():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(current_dir))
+else:
+    # Fallback for when __file__ is not available (during imports)
+    project_root = '/Users/aoufarfares/Developer/dataPipeline'
+
+# Add to path only if not already there and ensure it's before local directories
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
