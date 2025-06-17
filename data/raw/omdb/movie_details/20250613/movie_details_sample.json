@@ -1,0 +1,32 @@
+[
+  {
+    "Title":"The Shawshank Redemption",
+    "Year":"1990",
+    "Director":"Director 1",
+    "Plot":"Sample plot for The Shawshank Redemption",
+    "Genre":"Drama, Action",
+    "imdbRating":"8.0",
+    "BoxOffice":"$10 million",
+    "Source":"Sample OMDB Data (instant)"
+  },
+  {
+    "Title":"The Godfather",
+    "Year":"1991",
+    "Director":"Director 2",
+    "Plot":"Sample plot for The Godfather",
+    "Genre":"Drama, Action",
+    "imdbRating":"8.5",
+    "BoxOffice":"$15 million",
+    "Source":"Sample OMDB Data (instant)"
+  },
+  {
+    "Title":"The Dark Knight",
+    "Year":"1992",
+    "Director":"Director 3",
+    "Plot":"Sample plot for The Dark Knight",
+    "Genre":"Drama, Action",
+    "imdbRating":"9.0",
+    "BoxOffice":"$20 million",
+    "Source":"Sample OMDB Data (instant)"
+  }
+]

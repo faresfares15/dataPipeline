@@ -37,11 +37,19 @@ airflow/airflow.db
 airflow/webserver_config.py
 airflow/airflow.cfg
 scheduler.log
+webserver.log
+pipeline_output.log
+pipeline_last_run.log
+airflow-*.log
+airflow-*.err
+airflow-*.out
+*.pid
 
 # Spark
 spark-warehouse/
 metastore_db/
 derby.log
+*.crc
 
 # Large data files
 *.tsv

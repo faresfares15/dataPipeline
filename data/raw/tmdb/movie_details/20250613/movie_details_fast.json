@@ -1,0 +1,43 @@
+[
+  {
+    "title":"The Shawshank Redemption",
+    "release_date":"1994-09-23",
+    "overview":"Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "vote_average":8.711,
+    "vote_count":28423,
+    "popularity":27.8496,
+    "genre_ids":[
+      18,
+      80
+    ],
+    "source":"TMDB API Fast"
+  },
+  {
+    "title":"The Godfather",
+    "release_date":"1972-03-14",
+    "overview":"Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+    "vote_average":8.686,
+    "vote_count":21522,
+    "popularity":55.5205,
+    "genre_ids":[
+      18,
+      80
+    ],
+    "source":"TMDB API Fast"
+  },
+  {
+    "title":"The Dark Knight",
+    "release_date":"2008-07-16",
+    "overview":"Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+    "vote_average":8.52,
+    "vote_count":33944,
+    "popularity":22.126,
+    "genre_ids":[
+      18,
+      28,
+      80,
+      53
+    ],
+    "source":"TMDB API Fast"
+  }
+]

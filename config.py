@@ -23,6 +23,10 @@ IMDB_DATASETS = {
 OMDB_API_KEY = os.getenv("OMDB_API_KEY", "ad2d0927")
 OMDB_BASE_URL = "http://www.omdbapi.com/"
 
+# TMDB API (free tier: unlimited requests with rate limiting)
+TMDB_API_KEY = os.getenv("TMDB_API_KEY", "49c3b178cca9c678934157c9ccab786b")
+TMDB_BASE_URL = "https://api.themoviedb.org/3/"
+
 # Elasticsearch configuration
 ELASTICSEARCH_CONFIG = {
     "host": os.getenv("ES_HOST", "localhost"),
